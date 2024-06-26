@@ -1,1 +1,10 @@
+sequenceDiagram
+        participant browser
+        participant server
 
+browser->>server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_notes 
+activate server
+server-->> browser: redirect/notes
+deactivate server 
+
+Note right of browser : The user creates a new note in the text field and then clicks on the save button.
